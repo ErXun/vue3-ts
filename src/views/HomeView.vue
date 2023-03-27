@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="home-view">
+    <router-link :to="'/map'">Map</router-link>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { defineComponent, reactive, toRefs, ref } from "vue";
 
 export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
+  name: "HomeView",
+  components: {},
+  setup() {
+    return {};
   },
 });
 </script>
+
+<style lang="less" scoped>
+.home-view {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
